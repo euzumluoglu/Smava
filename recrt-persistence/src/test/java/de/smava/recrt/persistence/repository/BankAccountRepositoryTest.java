@@ -15,6 +15,13 @@ import java.util.List;
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertNull;
 
+/**
+ * @author Emin Üzümlüoğlu
+ * 
+ * Assert in junit.framework has been deprecated and should not be used. 
+ * Used instead of org.junit
+ *
+ */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(loader = AnnotationConfigContextLoader.class, classes = PersistenceConfig.class)
 public class BankAccountRepositoryTest {

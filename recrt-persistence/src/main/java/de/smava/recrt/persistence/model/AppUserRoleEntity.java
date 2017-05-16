@@ -13,6 +13,10 @@ public class AppUserRoleEntity implements AppUserRole {
 
     @EmbeddedId
     private AppUserRoleKey key;
+    
+	public AppUserRoleEntity(){
+		key = new AppUserRoleKey();
+	}
 
     @Override
     public UserRole getRole() {
