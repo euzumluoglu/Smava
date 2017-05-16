@@ -47,6 +47,11 @@ buildNumber.properties
 # IntelliJ
 /out/
 
+# Eclipse
+*.classpath
+*.project
+*.settings
+
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 
