@@ -21,7 +21,7 @@ public class AppUserRoleServiceImpl implements AppUserRoleService {
 
     @Override
     @Transactional
-    @Cacheable(value="appUserRoles", key="#appUser.username", unless = "#result != null")
+    @Cacheable(value="appUserRoles", key="#appUser.username")
     public List<? extends AppUserRole> getByAppUser(AppUser appUser) throws RecrtServiceException {
         return repository.findByKeyAppUser((AppUserEntity) appUser);
     }
