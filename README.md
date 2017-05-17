@@ -147,3 +147,18 @@ The method should only be callable by a user who has the **ROLE_ADMIN** role.
 
 1. Please provide any additional thoughts on how you would improve this code or how you would structure the 
 project differently and why under a secondary level header in this markdown file.
+
+## Suggessions 
+
+	1. In BankAccountServiceImpl service only "userName" is used to query bank accounts so it can be done without querying the user first(no joins necessary)
+		Gains:
+			- 1 less database access
+			- BankAccountService is seperated from UserService. It is no longer dependent on UserService to perform its task
+
+
+### For microservices
+
+	There are 3 services in this sample projects which may have different cpu/memory requirements, response times, SLA's etc. 
+	So it maybe considered to divide these three services under the same project to three microservices which can be deployed/managed/maintained/scaled independently.
+
+ 
